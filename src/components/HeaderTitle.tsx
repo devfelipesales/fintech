@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeaderTitle = () => {
   const { pathname } = window.location;
-  console.log(pathname);
+
   let title: string;
   switch (pathname) {
     case '/':
