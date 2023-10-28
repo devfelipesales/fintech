@@ -1,9 +1,12 @@
 import './Style.css';
+import SideNav from './components/SideNav';
 
 function App() {
   return (
     <>
-      <div>App</div>
+      <div className='flex box'>
+        <SideNav />
+      </div>
     </>
   );
 }

@@ -8,6 +8,27 @@ html {
   --gap-s: 0.625rem;
   /* 20px */
   --gap: 1.25rem;
+  box-sizing: border-box;
+}
+
+.bg-1 {
+  background: var(--color-1);
+}
+
+.bg-2 {
+  background: var(--color-2);
+}
+
+.bg-3 {
+  background: var(--color-3);
+}
+
+.bg-4 {
+  background: var(--color-4);
+}
+
+.bg-5 {
+  background: var(--color-5);
 }
 
 body {
@@ -20,7 +41,6 @@ body {
 .box {
   padding: var(--gap);
   border-radius: var(--gap);
-  background: var(--color-5);
 }
 
 button {
@@ -44,39 +64,58 @@ ul {
 
 .flex {
   display: flex;
-  gap: var(--gap);
 }
 
-.flex > * {
+/* .flex > * {
   flex: 1;
+} */
+
+.container {
+  display: grid;
 }
 
 .mb {
   margin-bottom: var(--gap);
 }
 
-.bg-1 {
-  background: var(--color-1);
+.p-s {
+  padding: var(--gap-s);
 }
 
-.bg-2 {
-  background: var(--color-2);
-}
-
-.bg-3 {
-  background: var(--color-3);
-}
-
-.bg-4 {
-  background: var(--color-4);
-}
-
-.bg-5 {
-  background: var(--color-5);
-}
-
-.container {
-  display: grid;
+.p-m {
   padding: var(--gap);
+}
+
+.gap-s {
+  gap: var(--gap-s);
+}
+.gap-m {
   gap: var(--gap);
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* SideNav */
+nav ul {
+  /* 18px */
+  font-size: 1.125rem;
+  color: var(--color-1);
+}
+
+nav li {
+  cursor: pointer;
+  display: flex;
+  gap: var(--gap-s);
+  align-items: center;
+}
+nav li img {
+  background-color: var(--color-5);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+nav li:hover img {
+  background-color: var(--color-3);
 }
