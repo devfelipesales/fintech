@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { DataContextProvider } from './Context/DataContext';
 import './Style.css';
 import SideNav from './components/SideNav';
 import Summary from './Pages/Summary';
@@ -7,14 +8,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className='flex box gap-m'>
-          <SideNav />
-          <main>
-            <Routes>
-              <Route path='/' element={<Summary />} />
-            </Routes>
-          </main>
-        </div>
+        <DataContextProvider>
+          <div className='flex box gap-m'>
+            <SideNav />
+            <main>
+              <Routes>
+                <Route path='/' element={<Summary />} />
+              </Routes>
+            </main>
+          </div>
+        </DataContextProvider>
       </BrowserRouter>
     </>
   );

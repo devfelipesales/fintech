@@ -1,11 +1,9 @@
 import React from 'react';
 import InputDate from './InputDate';
+import { useData } from '../Context/DataContext';
 
 const DateForm = () => {
-  const [initialDate, setInitialDate] = React.useState('');
-  const [finalDate, setFinalDate] = React.useState('');
-
-  function handleChange(target: EventTarget & HTMLInputElement) {}
+  const { initialDate, finalDate, setInitialDate, setFinalDate } = useData();
 
   return (
     <form className='box flex bg-5 gap-m' onSubmit={(e) => e.preventDefault()}>
