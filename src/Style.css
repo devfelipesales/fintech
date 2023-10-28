@@ -31,6 +31,10 @@ html {
   background: var(--color-5);
 }
 
+.rounded {
+  border-radius: 1.25rem;
+}
+
 body {
   font-family: sans-serif;
   margin: 0px;
@@ -40,7 +44,7 @@ body {
 
 .box {
   padding: var(--gap);
-  border-radius: var(--gap);
+  border-radius: 1.25rem;
 }
 
 button {
@@ -118,4 +122,38 @@ nav li img {
 
 nav li:hover img {
   background-color: var(--color-3);
+}
+
+/* Resume */
+
+/* dateForm */
+
+.dateForm {
+  display: flex;
+  background-color: var(--color-5);
+  gap: var(--gap);
+}
+
+.dateForm div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+}
+
+.dateForm label {
+  font-weight: 600;
+  padding: var(--gap-s);
+  background-color: var(--color-4);
+  border-radius: 1.25rem;
+  display: block;
+}
+
+.dateForm input {
+  padding: var(--gap-s);
+  background-color: var(--color-4);
+  border-radius: 1.25rem;
+  border: none;
+  font-family: monospace;
+  font-size: 1rem;
+  color: var(--color-2);
 }
