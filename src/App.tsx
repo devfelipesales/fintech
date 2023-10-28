@@ -3,6 +3,7 @@ import { DataContextProvider } from './Context/DataContext';
 import './Style.css';
 import SideNav from './components/SideNav';
 import Summary from './Pages/Summary';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         <DataContextProvider>
           <div className='flex box gap-m'>
             <SideNav />
-            <main>
+
+            <main className='grid'>
+              <Header />
               <Routes>
                 <Route path='/' element={<Summary />} />
               </Routes>

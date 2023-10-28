@@ -1,8 +1,7 @@
 import React from 'react';
-import DateForm from '../components/DateForm';
 
 const Summary = () => {
-  return <DateForm />;
+  return <div>Summary</div>;
 };
 
 export default Summary;
