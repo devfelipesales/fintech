@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../assets/fintech.svg';
 import ImgConfiguracoes from '../assets/icons/configuracoes.svg';
 import ImgContato from '../assets/icons/contato.svg';
@@ -7,15 +6,46 @@ import ImgSair from '../assets/icons/sair.svg';
 import ImgVendas from '../assets/icons/vendas.svg';
 import ImgWebhooks from '../assets/icons/webhooks.svg';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+
+const NavContainer = styled.nav`
+  padding: var(--gap);
+  border-radius: 1.25rem;
+  background-color: var(--color-3);
+
+  ul {
+    font-size: 1.125rem; // 18px
+    color: var(--color-1);
+    display: grid;
+    gap: var(--gap);
+  }
+
+  li {
+    cursor: pointer;
+    display: flex;
+    gap: var(--gap-s);
+    align-items: center;
+  }
+
+  li img {
+    background-color: var(--color-5);
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  li:hover img {
+    background-color: var(--color-3);
+  }
+`;
 
 const SideNav = () => {
   return (
-    <nav className='box bg-3'>
+    <NavContainer>
       <div className='mb'>
         <img src={Logo} alt='Logo' />
         {/* <NavLink to='/'>Resumo</NavLink> */}
       </div>
-      <ul className='container gap-s'>
+      <ul>
         <li>
           <img src={ImgResumo} alt='' />
           Resumo
@@ -41,7 +71,7 @@ const SideNav = () => {
           Sair
         </li>
       </ul>
-    </nav>
+    </NavContainer>
   );
 };
 

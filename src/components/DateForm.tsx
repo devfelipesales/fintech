@@ -8,7 +8,7 @@ const DateForm = () => {
   function handleChange(target: EventTarget & HTMLInputElement) {}
 
   return (
-    <form className='dateForm box' onSubmit={(e) => e.preventDefault()}>
+    <form className='box flex bg-5 gap-m' onSubmit={(e) => e.preventDefault()}>
       <InputDate
         label='Início'
         name='initialDate'
