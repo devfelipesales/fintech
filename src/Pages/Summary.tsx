@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useData } from '../Context/DataContext';
+import Loading from '../components/Loading';
 
 const Box = styled.div`
   padding: var(--gap);
@@ -49,7 +50,7 @@ const Summary = () => {
       }, 0);
   }
 
-  if (loading) return;
+  if (loading) return <Loading />;
   if (error) return <h2 style={{ color: 'red' }}>{error}</h2>;
 
   if (data?.length) {
