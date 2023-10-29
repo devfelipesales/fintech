@@ -13,7 +13,7 @@ function App() {
           <div className='flex box gap-m'>
             <SideNav />
 
-            <main className='container'>
+            <main className='container gap-m'>
               <Header />
               <Routes>
                 <Route path='/' element={<Summary />} />
