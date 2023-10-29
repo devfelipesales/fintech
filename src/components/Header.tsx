@@ -10,7 +10,7 @@ const Header = () => {
         <DateForm />
         <HeaderTitle />
       </div>
-      <div>
+      <div className='flex'>
         <Months />
       </div>
     </header>
