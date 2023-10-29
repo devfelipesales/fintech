@@ -5,8 +5,8 @@ interface IVenda {
   id: string;
   nome: string;
   preco: number;
-  status: string;
-  pagamento: string;
+  status: 'pago' | 'processando' | 'falha';
+  pagamento: 'boleto' | 'pix' | 'cartao';
   parcelas: number | null;
   data: Date;
 }
