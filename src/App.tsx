@@ -10,7 +10,7 @@ function App() {
     <>
       <BrowserRouter>
         <DataContextProvider>
-          <div className='flex box gap-m'>
+          <div className='containerApp'>
             <SideNav />
 
             <main className='container gap-m'>

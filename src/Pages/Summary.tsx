@@ -3,6 +3,12 @@ import styled from 'styled-components';
 import { useData } from '../Context/DataContext';
 import Loading from '../components/Loading';
 
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+`;
+
 const Box = styled.div`
   padding: var(--gap);
   background-color: var(--color-5);
@@ -69,7 +75,7 @@ const Summary = () => {
   }
 
   return (
-    <div className='flex gap-m'>
+    <Container>
       <Box>
         <h2>Vendas</h2>
         <span>{sales ? sales : 'R$ 0,00'}</span>
@@ -82,7 +88,7 @@ const Summary = () => {
         <h2>Processando</h2>
         <span>{processing ? processing : 'R$ 0,00'}</span>
       </Box>
-    </div>
+    </Container>
   );
 };
 

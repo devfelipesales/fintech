@@ -1,5 +1,12 @@
 import React from 'react';
 import BtnMonth from './BtnMonth';
+import styled from 'styled-components';
+
+const ContainerMonths = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+`;
 
 const Months = () => {
   function monthName(n: number) {
@@ -23,12 +30,12 @@ const Months = () => {
   }
 
   return (
-    <div className='flex gap-m'>
+    <ContainerMonths>
       <BtnMonth label={monthName(-3)} month={getMonth(-3)} />
       <BtnMonth label={monthName(-2)} month={getMonth(-2)} />
       <BtnMonth label={monthName(-1)} month={getMonth(-1)} />
       <BtnMonth label={monthName(0)} month={getMonth(0)} />
-    </div>
+    </ContainerMonths>
   );
 };
 
