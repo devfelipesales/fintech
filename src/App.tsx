@@ -4,6 +4,7 @@ import './Style.css';
 import SideNav from './components/SideNav';
 import Summary from './Pages/Summary';
 import Header from './components/Header';
+import Sales from './Pages/Sales';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Header />
               <Routes>
                 <Route path='/' element={<Summary />} />
+                <Route path='/vendas' element={<Sales />} />
               </Routes>
             </main>
           </div>
