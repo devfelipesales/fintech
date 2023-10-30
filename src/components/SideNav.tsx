@@ -21,7 +21,6 @@ const NavContainer = styled.nav`
   }
 
   li {
-    cursor: pointer;
     display: flex;
     gap: var(--gap-s);
     align-items: center;
@@ -36,6 +35,12 @@ const NavContainer = styled.nav`
   li:hover img {
     background-color: var(--color-3);
   }
+
+  a {
+    text-decoration: none;
+    color: var(--color-1);
+    cursor: pointer;
+  }
 `;
 
 const SideNav = () => {
@@ -43,17 +48,20 @@ const SideNav = () => {
     <NavContainer>
       <div className='mb'>
         <img src={Logo} alt='Logo' />
-        {/* <NavLink to='/'>Resumo</NavLink> */}
       </div>
       <ul>
-        <li>
-          <img src={ImgResumo} alt='' />
-          Resumo
-        </li>
-        <li>
-          <img src={ImgVendas} alt='' />
-          Vendas
-        </li>
+        <NavLink to='/'>
+          <li>
+            <img src={ImgResumo} alt='' />
+            Resumo
+          </li>
+        </NavLink>
+        <NavLink to='/vendas'>
+          <li>
+            <img src={ImgVendas} alt='' />
+            Vendas
+          </li>
+        </NavLink>
         <li>
           <img src={ImgWebhooks} alt='' />
           WebHooks
