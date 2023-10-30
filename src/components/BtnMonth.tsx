@@ -8,7 +8,7 @@ type IButtonProps = React.ComponentProps<'button'> & {
 };
 
 const Button = styled.button`
-  padding: 0.625rem 1.25rem;
+  padding: 1.25rem 0.625rem;
   background-color: var(--color-3);
   border: 1px solid var(--color-3);
   border-radius: 1.25rem;
