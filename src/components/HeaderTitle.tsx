@@ -3,13 +3,21 @@ import React from 'react';
 const HeaderTitle = () => {
   const { pathname } = window.location;
 
+  function upperCaseFirstLetter(value: string) {
+    return value.replace(value.charAt(0), value.charAt(0).toUpperCase());
+  }
+
   let title: string;
+  let arrTitle: string[];
   switch (pathname) {
     case '/':
       title = 'Resumo';
+      document.title = 'Fintech | ' + title;
       break;
     default:
-      title = pathname.substring(1, pathname.length);
+      arrTitle = pathname.split('/');
+      title = arrTitle[1];
+      document.title = 'Fintech | ' + upperCaseFirstLetter(title);
       break;
   }
 
