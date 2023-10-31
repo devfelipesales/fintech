@@ -23,6 +23,7 @@ const Input = styled.input`
   font-family: monospace;
   font-size: 1rem;
   color: var(--color-2);
+  align-self: self-start;
 `;
 
 type IInputProps = React.ComponentProps<'input'> & {

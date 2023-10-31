@@ -1,12 +1,22 @@
 import React from 'react';
 import InputDate from './InputDate';
 import { useData } from '../Context/DataContext';
+import styled from 'styled-components';
+
+const Form = styled.form`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  background-color: var(--color-5);
+  padding: var(--gap);
+  border-radius: 1.25rem;
+`;
 
 const DateForm = () => {
   const { initialDate, finalDate, setInitialDate, setFinalDate } = useData();
 
   return (
-    <form className='box flex bg-5 gap-m' onSubmit={(e) => e.preventDefault()}>
+    <Form onSubmit={(e) => e.preventDefault()}>
       <InputDate
         label='Início'
         name='initialDate'
@@ -19,7 +29,7 @@ const DateForm = () => {
         value={finalDate}
         onChange={({ target }) => setFinalDate(target.value)}
       />
-    </form>
+    </Form>
   );
 };
 
