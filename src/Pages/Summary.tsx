@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useData } from '../Context/DataContext';
 import Loading from '../components/Loading';
+import SalesChart from '../components/SalesChart';
 
 const Container = styled.div`
   display: grid;
@@ -58,6 +59,7 @@ const Summary = () => {
 
   if (loading) return <Loading />;
   if (error) return <h2 style={{ color: 'red' }}>{error}</h2>;
+  if (!data) return null;
 
   if (data?.length) {
     sales = getSales()?.toLocaleString('pt-BR', {
@@ -75,20 +77,25 @@ const Summary = () => {
   }
 
   return (
-    <Container>
-      <Box>
-        <h2>Vendas</h2>
-        <span>{sales ? sales : 'R$ 0,00'}</span>
-      </Box>
-      <Box>
-        <h2>Recebido</h2>
-        <span>{received ? received : 'R$ 0,00'}</span>
-      </Box>
-      <Box>
-        <h2>Processando</h2>
-        <span>{processing ? processing : 'R$ 0,00'}</span>
-      </Box>
-    </Container>
+    <>
+      <Container>
+        <Box>
+          <h2>Vendas</h2>
+          <span>{sales ? sales : 'R$ 0,00'}</span>
+        </Box>
+        <Box>
+          <h2>Recebido</h2>
+          <span>{received ? received : 'R$ 0,00'}</span>
+        </Box>
+        <Box>
+          <h2>Processando</h2>
+          <span>{processing ? processing : 'R$ 0,00'}</span>
+        </Box>
+      </Container>
+      <div style={{ marginTop: 'var(--gap)' }}>
+        <SalesChart />
+      </div>
+    </>
   );
 };
 
