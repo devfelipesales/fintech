@@ -29,12 +29,15 @@ const BtnMonth = ({ label, month, ...props }: IButtonProps) => {
     const date = new Date();
     date.setMonth(month);
 
-    const [dd, mm, yyyy] = date
+    const arrLocaleDate = date
       .toLocaleDateString() // dd/mm/yyyy
-      .replace(String(date.getDate()), '01') // Altera o dia atual pelo Dia 01 do mês
       .split('/');
 
-    const formattedInitDate = `${yyyy}-${mm}-${dd}`;
+    const mm = arrLocaleDate[1];
+    const yyyy = arrLocaleDate[2];
+
+    const formattedInitDate = `${yyyy}-${mm}-${'01'}`;
+
     return formattedInitDate;
   }
 
@@ -43,6 +46,7 @@ const BtnMonth = ({ label, month, ...props }: IButtonProps) => {
 
     // último dia do mês -> mês + 1,  dia = 0
     const lastDayDate = new Date(date.getFullYear(), month + 1, 0);
+
     const [dd, mm, yyyy] = lastDayDate
       .toLocaleDateString() // dd/mm/yyyy
       .split('/');
