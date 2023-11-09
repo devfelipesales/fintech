@@ -23,7 +23,6 @@ const Box = styled.div`
 `;
 
 const Id = styled.div`
-  font-family: 'monospace';
   font-size: 0.8125rem;
   cursor: pointer;
 
@@ -46,7 +45,12 @@ const Sales = () => {
           <li key={id}>
             <Box>
               <Id>
-                <NavLink to={`/vendas/${id}`}>{id}</NavLink>
+                <NavLink
+                  style={{ fontFamily: 'monospace' }}
+                  to={`/vendas/${id}`}
+                >
+                  {id}
+                </NavLink>
               </Id>
               <div>{nome}</div>
 
