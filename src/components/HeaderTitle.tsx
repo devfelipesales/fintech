@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -12,25 +13,27 @@ const Container = styled.div`
 `;
 
 const HeaderTitle = () => {
-  const { pathname } = window.location;
+  const [title, setTitle] = React.useState('Resumo');
+  const { pathname } = useLocation();
 
   function upperCaseFirstLetter(value: string) {
     return value.replace(value.charAt(0), value.charAt(0).toUpperCase());
   }
 
-  let title: string;
-  let arrTitle: string[];
-  switch (pathname) {
-    case '/':
-      title = 'Resumo';
-      document.title = 'Fintech | ' + title;
-      break;
-    default:
-      arrTitle = pathname.split('/');
-      title = arrTitle[1];
-      document.title = 'Fintech | ' + upperCaseFirstLetter(title);
-      break;
-  }
+  React.useEffect(() => {
+    let arrTitle: string[];
+    switch (pathname) {
+      case '/':
+        setTitle('Resumo');
+        document.title = 'Fintech | Resumo';
+        break;
+      default:
+        arrTitle = pathname.split('/');
+        setTitle(arrTitle[1]);
+        document.title = 'Fintech | ' + upperCaseFirstLetter(arrTitle[1]);
+        break;
+    }
+  }, [pathname]);
 
   return (
     <Container>
