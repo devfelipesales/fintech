@@ -1,4 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  padding: var(--gap);
+  border-radius: 1.25rem;
+  background-color: var(--color-3);
+
+  @media (max-width: 960px) {
+    grid-row: 1;
+  }
+`;
 
 const HeaderTitle = () => {
   const { pathname } = window.location;
@@ -22,9 +33,9 @@ const HeaderTitle = () => {
   }
 
   return (
-    <div className='box bg-3'>
+    <Container>
       <h1 style={{ textTransform: 'capitalize' }}>{title}</h1>
-    </div>
+    </Container>
   );
 };
 

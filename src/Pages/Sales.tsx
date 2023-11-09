@@ -16,6 +16,10 @@ const Box = styled.div`
   background-color: var(--color-5);
   border-radius: 1.25rem;
   padding: var(--gap);
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Id = styled.div`

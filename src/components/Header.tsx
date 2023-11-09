@@ -7,17 +7,25 @@ import styled from 'styled-components';
 const ContainerHeader = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: var(--gap);
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 600px) {
+    gap: var(--gap-s);
+  }
 `;
 
 const Container = styled.div`
   display: grid;
-  flex: 1;
 `;
 
 const Header = () => {
   return (
-    <header className='flex-column gap-m'>
+    <header className='flex-column media-gap'>
       <ContainerHeader>
         <DateForm />
         <HeaderTitle />

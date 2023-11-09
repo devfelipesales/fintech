@@ -15,7 +15,7 @@ function App() {
           <div className='containerApp'>
             <SideNav />
 
-            <main className='container gap-m'>
+            <main className='container media-gap'>
               <Header />
               <Routes>
                 <Route path='/' element={<Summary />} />

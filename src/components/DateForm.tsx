@@ -10,6 +10,10 @@ const Form = styled.form`
   background-color: var(--color-5);
   padding: var(--gap);
   border-radius: 1.25rem;
+
+  @media (max-width: 460px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const DateForm = () => {

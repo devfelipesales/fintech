@@ -77,10 +77,6 @@ ul {
   flex-direction: column;
 }
 
-/* .flex > * {
-  flex: 1;
-} */
-
 .container {
   display: grid;
 }
@@ -94,6 +90,10 @@ ul {
 
 .mb {
   margin-bottom: var(--gap);
+}
+
+.mt {
+  margin-top: var(--gap);
 }
 
 .p-s {
@@ -113,4 +113,25 @@ ul {
 
 .align-center {
   align-items: center;
+}
+
+.media-gap {
+  gap: var(--gap);
+}
+
+@media (max-width: 800px) {
+  .containerApp {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .containerApp {
+    gap: var(--gap-s);
+    padding: var(--gap-s);
+  }
+
+  .media-gap {
+    gap: var(--gap-s);
+  }
 }

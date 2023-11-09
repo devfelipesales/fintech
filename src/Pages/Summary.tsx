@@ -8,6 +8,14 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 600px) {
+    gap: var(--gap-s);
+  }
 `;
 
 const Box = styled.div`
@@ -92,7 +100,7 @@ const Summary = () => {
           <span>{processing ? processing : 'R$ 0,00'}</span>
         </Box>
       </Container>
-      <div style={{ marginTop: 'var(--gap)' }}>
+      <div className='box bg-5 p-m'>
         <SalesChart />
       </div>
     </>

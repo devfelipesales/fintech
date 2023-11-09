@@ -16,6 +16,7 @@ const Container = styled.div`
   div {
     padding: var(--gap);
     background-color: var(--color-5);
+    border-radius: 1.25rem;
   }
 `;
 

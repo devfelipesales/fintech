@@ -18,6 +18,21 @@ const NavContainer = styled.nav`
     color: var(--color-1);
     display: grid;
     gap: var(--gap);
+    padding: var(--gap);
+  }
+
+  @media (max-width: 800px) {
+    padding-left: 0;
+
+    ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
   }
 
   li {
@@ -28,7 +43,7 @@ const NavContainer = styled.nav`
 
   li img {
     background-color: var(--color-5);
-    padding: 5px;
+    padding: 3px;
     border-radius: 50%;
   }
 
@@ -46,7 +61,7 @@ const NavContainer = styled.nav`
 const SideNav = () => {
   return (
     <NavContainer>
-      <div className='mb'>
+      <div className='p-m'>
         <img src={Logo} alt='Logo' />
       </div>
       <ul>

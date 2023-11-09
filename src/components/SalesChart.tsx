@@ -68,11 +68,11 @@ const SalesChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type='monotone' dataKey='pago' stroke='#82ca00' strokeWidth={3} />
+        <Line type='monotone' dataKey='pago' stroke='#A36AF9' strokeWidth={3} />
         <Line
           type='monotone'
           dataKey='processando'
-          stroke='#8884d8'
+          stroke='#FBCB21'
           strokeWidth={3}
         />
         <Line
