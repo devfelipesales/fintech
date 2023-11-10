@@ -1,4 +1,4 @@
-import Logo from '../assets/fintech.svg';
+import FintechSVG from '../assets/FintechSVG';
 import ImgConfiguracoes from '../assets/icons/configuracoes.svg';
 import ImgContato from '../assets/icons/contato.svg';
 import ImgResumo from '../assets/icons/resumo.svg';
@@ -62,7 +62,7 @@ const SideNav = () => {
   return (
     <NavContainer>
       <div className='p-m'>
-        <img src={Logo} alt='Logo' />
+        <FintechSVG title='Fintech Logo' />
       </div>
       <ul>
         <NavLink to='/'>
